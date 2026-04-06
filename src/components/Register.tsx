@@ -159,7 +159,7 @@ export default function Register() {
                 <div className="text-sm font-bold text-slate-900 mb-4">🎯 Your Goals</div>
                 <div className="flex flex-col gap-3.5">
                   <div>
-                    <label className="block text-xs font-semibold text-gray-700 mb-1.5">What's your main goal? <span className="text-red-500">*</span></label>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1.5">{"What's your main goal?"} <span className="text-red-500">*</span></label>
                     <select className={inputCls} name="goal" value={form.goal} onChange={handle}>
                       <option value="">Select your goal</option>
                       {["Get my first tech job","Switch careers into technical writing","Work remotely with global clients","Freelance as a technical writer","Upskill while in college","Join BEGAWN's team directly"].map(o=><option key={o}>{o}</option>)}
@@ -179,7 +179,7 @@ export default function Register() {
                   <label className="flex gap-3 items-start cursor-pointer bg-slate-50 px-4 py-3.5 rounded-lg border border-slate-200">
                     <input type="checkbox" name="agreeTerms" checked={form.agreeTerms} onChange={handle} className="mt-0.5 w-4 h-4 accent-brand-700 flex-shrink-0" />
                     <span className="text-xs text-slate-500 leading-relaxed">
-                      I agree to BEGAWN Academy's terms and conditions. I understand enrollment is confirmed after a review call and seats are limited.
+                     {"I agree to BEGAWN Academy's terms and conditions. I understand enrollment is confirmed after a review call and seats are limited."}
                     </span>
                   </label>
                 </div>

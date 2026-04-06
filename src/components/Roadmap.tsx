@@ -202,7 +202,7 @@ export default function Roadmap() {
             </h3>
             <p className="text-sm text-slate-500 leading-relaxed max-w-lg">
               Each phase includes actual SME interviews, client feedback sessions, and professional
-              Slack & email communication — the exact skills BEGAWN's own writers use every day.
+              Slack & email communication — the exact skills BEGAWN&apos;s own writers use every day.
             </p>
           </div>
           <a

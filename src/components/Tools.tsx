@@ -1,3 +1,5 @@
+"use client";
+
 const cats = [
   {
     label: "Writing & Editing",
@@ -52,7 +54,7 @@ export default function Tools() {
             Tools You'll Master
           </h2>
           <p className="text-slate-500 text-sm">
-            You don't just learn about these tools — you use them on real client projects.
+            {"You don't just learn about these tools — you use them on real client projects."}
           </p>
         </div>
 
@@ -68,11 +70,15 @@ export default function Tools() {
                   {cat.label}
                 </span>
               </div>
+
               {cat.tools.map((t, j) => (
                 <div
                   key={j}
                   className="flex items-center gap-3.5 px-4 py-3"
-                  style={{ borderBottom: j < cat.tools.length - 1 ? "1px solid #f8fafc" : "none" }}
+                  style={{
+                    borderBottom:
+                      j < cat.tools.length - 1 ? "1px solid #f8fafc" : "none",
+                  }}
                 >
                   <div
                     className="w-2 h-2 rounded-full flex-shrink-0"
@@ -91,8 +97,8 @@ export default function Tools() {
         <div className="mt-4 bg-white border border-slate-200 rounded-xl px-5 py-4 flex items-center gap-3.5">
           <span className="text-2xl">✨</span>
           <p className="text-sm text-gray-700 leading-relaxed">
-            <strong>Every tool is used on live client projects.</strong> By graduation, your
-            portfolio proves your proficiency — no separate certification courses needed.
+            <strong>Every tool is used on live client projects.</strong>{" "}
+            {"By graduation, your portfolio proves your proficiency — no separate certification courses needed."}
           </p>
         </div>
       </div>

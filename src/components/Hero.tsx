@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-6">
             <span className="w-1.5 h-1.5 bg-brand-700 rounded-full inline-block" />
             <span className="text-brand-700 text-xs font-bold tracking-widest uppercase">
-              India's First Technical Writing Academy
+             India&apos;s First Technical Writing Academy
             </span>
           </div>
 
@@ -76,7 +76,7 @@ export default function Hero() {
             <span className="text-slate-500 text-sm">
               Taught by{" "}
               <span className="text-brand-700 font-semibold">6 expert instructors</span>{" "}
-              from BEGAWN's active team
+              from BEGAWN&apos;s active team
             </span>
           </div>
 
