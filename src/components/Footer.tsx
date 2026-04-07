@@ -6,7 +6,7 @@ import {
   FiArrowRight,
   FiGlobe,
 } from "react-icons/fi";
-import Logo from "@/assets/logo/logo.png";
+import Image from "next/image";
 
 export default function Footer() {
   const navCols = [
@@ -55,10 +55,12 @@ export default function Footer() {
                 href="#"
                 className="flex items-center gap-1 flex-shrink-0 no-underline"
               >
-                <img
-                  src={Logo.src}
+                <Image
+                  src="/Logo/logo.png"
                   alt="Begawn Logo"
-                  className="w-8  h-8  object-contain"
+                  width={32}
+                  height={32}
+                  className="object-contain"
                 />
                 <span className="font-extrabold text-lg text-white  uppercase">
                   Begawn <span className="text-brand-700">Academy</span>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Logo from "@/assets/logo/logo.png";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,11 +21,13 @@ export default function Navbar() {
           href="#"
           className="flex items-center gap-1 flex-shrink-0 no-underline"
         >
-          <img
-            src={Logo.src}
-            alt="Begawn Logo"
-            className="w-8  h-8  object-contain"
-          />
+          <Image
+  src="/Logo/logo.png"
+  alt="Begawn Logo"
+  width={32}
+  height={32}
+  className="object-contain"
+/>
           <span className="font-extrabold text-lg text-slate-900 tracking-tight uppercase">
             Begawn <span className="text-brand-700">Academy</span>
           </span>
