@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Logo from "@/assests/logo/logo.png";
+import Logo from "@/assets/logo/logo.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

@@ -6,7 +6,7 @@ import {
   FiArrowRight,
   FiGlobe,
 } from "react-icons/fi";
-import Logo from "@/assests/logo/logo.png";
+import Logo from "@/assets/logo/logo.png";
 
 export default function Footer() {
   const navCols = [
