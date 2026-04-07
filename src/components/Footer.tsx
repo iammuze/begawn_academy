@@ -56,7 +56,7 @@ export default function Footer() {
                 className="flex items-center gap-1 flex-shrink-0 no-underline"
               >
                 <Image
-                  src="/Logo/logo.png"
+                  src="/logo/logo.png"
                   alt="Begawn Logo"
                   width={32}
                   height={32}
