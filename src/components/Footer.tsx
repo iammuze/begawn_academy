@@ -62,6 +62,7 @@ export default function Footer() {
                   height={32}
                   className="object-contain"
                 />
+               
                 <span className="font-extrabold text-lg text-white  uppercase">
                   Begawn <span className="text-brand-700">Academy</span>
                 </span>
