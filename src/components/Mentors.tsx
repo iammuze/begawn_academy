@@ -1,5 +1,7 @@
 "use client";
 import { Stars, Avatar } from "./shared";
+import Image from "next/image";
+
 
 const instructors = [
   { name: "Priya Mehta",    role: "Technical Writing Lead",      courses: 2, students: "4.2k", rating: 4.8, initials: "PM", bg: "#7c3aed" },
@@ -11,8 +13,16 @@ const instructors = [
 ];
 
 const clients = [
-  "Intel", "Tata Communications", "TrendSpider", "Knowi",
-  "SignalStack", "InstaWP", "ProtectOnce", "Rebel Bots",
+  { name: "MediLedger", logo: "/company/12img.png" },
+  { name: "Knowi", logo: "/company/11img.png" },
+  { name: "InstaWP", logo: "/company/10img.png" },
+  { name: "LayerZero", logo: "/company/7img.png" },
+  { name: "Scalemath", logo: "/company/6img.png" },
+  { name: "Amove", logo: "/company/5img.png" },
+  { name: "OneDeck", logo: "/company/4img.png" },
+  { name: "Muso AI", logo: "/company/3img.png" },
+  { name: "Rebel Bots", logo: "/company/2img.png" },
+  { name: "SimpleTix", logo: "/company/1img.png" },
 ];
 
 const whatYouGet = [
@@ -62,21 +72,30 @@ export default function Mentors() {
         </div>
 
         {/* Clients */}
-        <div className="bg-white border border-slate-200 rounded-xl p-6 mb-4">
-          <div className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-3.5 text-center">
-            Clients Our Instructors Have Delivered Docs For
-          </div>
-          <div className="flex flex-wrap gap-2.5 justify-center">
-            {clients.map((c) => (
-              <span
-                key={c}
-                className="bg-slate-50 border border-slate-200 rounded-md px-4 py-1.5 text-sm font-semibold text-gray-700"
-              >
-                {c}
-              </span>
-            ))}
-          </div>
+{/* Clients */}
+<div className="bg-white border border-slate-200 rounded-xl py-6 mb-4 overflow-hidden">
+  <div className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-4 text-center">
+    Clients Our Instructors Have Delivered Docs For
+  </div>
+
+  <div className="overflow-hidden">
+    <div className="flex gap-12 animate-scroll items-center">
+      
+      {[...clients, ...clients].map((c, i) => (
+        <div key={i} className="min-w-[140px] flex justify-center items-center">
+          <Image
+            src={c.logo}
+            alt={c.name}
+            width={120}
+            height={40}
+            className="h-10 w-auto object-contain opacity-100 transition duration-300"
+          />
         </div>
+      ))}
+
+    </div>
+  </div>
+</div>
 
         {/* Testimonial */}
         <div className="bg-slate-900 rounded-xl p-7 flex gap-5 items-start flex-wrap">
@@ -101,11 +120,11 @@ export default function Mentors() {
         {/* What You Get */}
         <div className="mt-10">
           <h3 className="text-xl font-extrabold text-slate-900 mb-5">What You Get on Completion</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 ">
             {whatYouGet.map((w, i) => (
               <div
                 key={i}
-                className="bg-white border border-slate-200 rounded-xl p-4.5 hover:shadow-md transition-shadow"
+                className="bg-white border border-slate-200 rounded-2xl p-5 hover:shadow-md transition-shadow"
               >
                 <div className="text-2xl mb-2.5">{w.icon}</div>
                 <div className="text-sm font-bold text-slate-900 mb-1">{w.title}</div>

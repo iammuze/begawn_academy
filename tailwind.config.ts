@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          50:  "#eff6ff",
+          50: "#eff6ff",
           100: "#dbeafe",
           200: "#bfdbfe",
           500: "#3b82f6",
@@ -23,14 +23,20 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
-      animation: {
-        "fade-up": "fadeUp 0.5s ease forwards",
-      },
-      keyframes: {
-        fadeUp: {
-          "0%":   { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
+     animation: {
+  "fade-up": "fadeUp 0.5s ease forwards",
+  "scroll": "scroll 25s linear infinite", // 👈 ADD
+},
+
+keyframes: {
+  fadeUp: {
+    "0%": { opacity: "0", transform: "translateY(20px)" },
+    "100%": { opacity: "1", transform: "translateY(0)" },
+  },
+        scroll: { // 👈 ADD
+    "0%": { transform: "translateX(0)" },
+    "100%": { transform: "translateX(-50%)" },
+  },
       },
     },
   },
