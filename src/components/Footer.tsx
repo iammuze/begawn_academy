@@ -62,7 +62,7 @@ export default function Footer() {
                   height={32}
                   className="object-contain"
                 />
-               
+
                 <span className="font-extrabold text-lg text-white  uppercase">
                   Begawn <span className="text-brand-700">Academy</span>
                 </span>
@@ -131,8 +131,8 @@ export default function Footer() {
               >
                 <FiMapPin className="text-blue-500 size-5 shrink-0" />
                 <span className="leading-relaxed group-hover:translate-x-1 transition-transform">
-                  Plot no. E-309 <br />
-                  Industrial Area, Sector 75 <br />
+                  K&amp;B Tower, F-465 <br />
+                  Industrial Area, Sector 74 <br />
                   Sahibzada Ajit Singh Nagar, Punjab 140307
                 </span>
               </a>
