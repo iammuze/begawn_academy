@@ -63,20 +63,20 @@ export default function Register() {
     );
 
   return (
-    <section id="register" className="py-16 px-6 bg-slate-50 border-t border-slate-200">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-7 items-start">
+    <section id="register" className="py-20 px-6 bg-slate-50 border-t border-slate-200">
+<div className="max-w-4xl  mx-auto">
 
         {/* Form */}
-        <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden">
           {/* Header */}
-          <div className="bg-slate-900 px-7 py-6">
+          <div className="bg-slate-900 px-7 py-8">
             <div className="text-xs text-blue-400 font-bold uppercase tracking-widest mb-1">
               Applications Open
             </div>
             <h2 className="text-xl font-extrabold text-white mb-1">Apply to BEGAWN Academy</h2>
             <p className="text-sm text-slate-400">Fill in the form — we review within 24–48 hours.</p>
             {/* Step tabs */}
-            <div className="flex mt-4 rounded-md overflow-hidden border border-white/10">
+            <div className="flex mt-4 rounded-3xl overflow-hidden border border-white/10">
               {["Personal Info", "Education", "Your Goals"].map((s, i) => (
                 <button
                   key={i}
@@ -111,7 +111,7 @@ export default function Register() {
                     </select>
                   </div>
                 </div>
-                <button onClick={() => setStep(2)} className="mt-5 w-full bg-brand-700 text-white py-3 rounded-lg font-bold text-sm hover:bg-brand-800 transition-colors">
+                <button onClick={() => setStep(2)} className="mt-5 w-full bg-brand-700 text-white py-3 rounded-3xl font-bold text-sm hover:bg-brand-800 transition-colors">
                   Continue → Education Details
                 </button>
               </div>
@@ -184,11 +184,11 @@ export default function Register() {
                   </label>
                 </div>
                 <div className="flex gap-3 mt-5">
-                  <button onClick={() => setStep(2)} className="bg-slate-100 text-gray-700 px-5 py-3 rounded-lg font-semibold text-sm">← Back</button>
+                  <button onClick={() => setStep(2)} className="bg-slate-100 text-gray-700 px-5 py-3 rounded-3xl font-semibold text-sm">← Back</button>
                   <button
                     onClick={submit}
                     disabled={loading}
-                    className={`flex-1 py-3.5 text-white font-extrabold text-base rounded-lg transition-colors ${loading ? "bg-slate-400 cursor-not-allowed" : "bg-brand-700 hover:bg-brand-800 cursor-pointer"}`}
+                    className={`flex-1 py-3.5 text-white font-extrabold text-base rounded-3xl transition-colors ${loading ? "bg-slate-400 cursor-not-allowed" : "bg-brand-700 hover:bg-brand-800 cursor-pointer"}`}
                   >
                     {loading ? "⏳ Submitting..." : "🚀 Submit Application"}
                   </button>
@@ -199,46 +199,6 @@ export default function Register() {
           </div>
         </div>
 
-        {/* Sidebar */}
-        <div className="flex flex-col gap-3.5 lg:sticky lg:top-20">
-          <div className="bg-white border border-slate-200 rounded-xl p-5">
-            <div className="text-sm font-bold text-slate-900 mb-3.5">📋 Program Snapshot</div>
-            {[
-              { l: "Duration", v: "45 Days" },
-              { l: "Format",   v: "Offline + Real Experience" },
-              { l: "Batch Size", v: "30 seats" },
-              { l: "Certificate", v: "BEGAWN Certified" },
-              { l: "Placement", v: "100% Support" },
-              { l: "Language", v: "English" },
-            ].map((r, i) => (
-              <div key={i} className={`flex justify-between py-2.5 ${i < 5 ? "border-b border-slate-100" : ""}`}>
-                <span className="text-xs text-slate-500">{r.l}</span>
-                <span className="text-xs font-semibold text-slate-900">{r.v}</span>
-              </div>
-            ))}
-          </div>
-{/* 
-          <div className="bg-amber-50 border border-amber-300 rounded-xl p-4">
-            <div className="text-sm font-bold text-amber-800 mb-1.5">⏰ Limited Availability</div>
-            <p className="text-xs text-amber-900 leading-relaxed">
-              Only <strong>12 seats</strong> remaining in this batch. Applications are first-come, first-served.
-            </p>
-          </div> */}
-
-          <div className="bg-white border border-slate-200 rounded-xl p-4">
-            <div className="flex items-center gap-2.5 mb-2.5">
-              <Avatar initials="RK" bg="#7c3aed" size={36} />
-              <div>
-                <div className="text-sm font-bold text-slate-900">Rohit K.</div>
-                <div className="text-xs text-slate-500">Now at TCS as Technical Writer</div>
-              </div>
-            </div>
-            <p className="text-xs text-gray-700 leading-relaxed italic">
-              "I had zero experience. BEGAWN gave me real projects and a portfolio that got me hired in under 3 months."
-            </p>
-            <div className="mt-2"><Stars rating={5} /></div>
-          </div>
-        </div>
       </div>
     </section>
   );

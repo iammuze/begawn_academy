@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
-import CoursesSection from "@/components/CoursesSection";
+// import CoursesSection from "@/components/CoursesSection";
 import Roadmap from "@/components/Roadmap";
 import Tools from "@/components/Tools";
 import WhoShouldJoin from "@/components/WhoShouldJoin";
@@ -16,7 +16,7 @@ export default function Page() {
       <main>
         <Hero />
         <TrustBar />
-        <CoursesSection />
+        {/* <CoursesSection /> */}
         <Roadmap />
         <Tools />
         <WhoShouldJoin />

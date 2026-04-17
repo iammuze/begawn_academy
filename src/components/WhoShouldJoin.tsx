@@ -1,5 +1,8 @@
 "use client";
 
+import React from 'react';
+import { CheckCircle2 } from 'lucide-react';
+
 const profiles = [
   {
     icon: "🎓",
@@ -37,61 +40,76 @@ const checklist = [
 
 export default function WhoShouldJoin() {
   return (
-    <section className="py-16 px-6 bg-white border-t border-slate-200">
+    <section id="who-should-join" className="py-20 px-6 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          
+          {/* Left Column: Profiles */}
           <div>
-            <div className="text-xs font-bold text-emerald-700 uppercase tracking-widest mb-2">
+            <div className="text-[11px] font-black text-emerald-600 uppercase tracking-[0.2em] mb-3">
               Perfect For
             </div>
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-7">
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-8 tracking-tight">
               Who Should Join?
             </h2>
-            <div className="flex flex-col gap-3">
+            
+            <div className="flex flex-col gap-4">
               {profiles.map((p, i) => (
                 <div
                   key={i}
-                  className="bg-slate-50 border border-slate-200 rounded-xl p-4 flex gap-3.5 items-start hover:bg-blue-50 hover:border-blue-200 transition-all cursor-default"
+                  className="group bg-white border border-slate-200 rounded-2xl p-5 flex gap-5 items-start hover:border-blue-400 hover:shadow-md transition-all duration-300 cursor-default"
                 >
-                  <span className="text-3xl flex-shrink-0">{p.icon}</span>
+                  <div className="text-4xl  transition-all duration-300 pt-1">
+                    {p.icon}
+                  </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-sm font-bold text-slate-900">{p.title}</span>
-                      <span className="text-xs text-slate-500 bg-slate-200 px-2 py-0.5 rounded-full">
+                    <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                      <span className="text-base font-bold text-slate-900">{p.title}</span>
+                      <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded uppercase tracking-wider">
                         {p.sub}
                       </span>
                     </div>
-                    <p className="text-[13.5px] text-slate-500 leading-relaxed">{p.desc}</p>
+                    <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                      {p.desc}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Checklist */}
-          <div className="bg-slate-900 rounded-2xl p-8 text-white lg:sticky lg:top-20">
-            <h3 className="text-xl font-extrabold mb-1.5">You Belong Here If…</h3>
-            <p className="text-slate-400 text-sm mb-6">
-              Say yes to even one — this program was built for you.
-            </p>
-            {checklist.map((c, i) => (
-              <div key={i} className="flex gap-3 items-start mb-4">
-                <div className="w-5 h-5 rounded-full bg-brand-700 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-white text-xs">✓</span>
-                </div>
-                <span className="text-[14.5px] text-slate-300 leading-relaxed">{c}</span>
+          {/* Right Column: Checklist */}
+          <div className="lg:sticky lg:top-24">
+            <div className="bg-slate-900 rounded-3xl p-8 lg:p-10 text-white shadow-2xl relative overflow-hidden">
+              {/* Decorative background element */}
+              <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
+              
+              <h3 className="text-2xl font-bold mb-6 relative z-10">This is for you if:</h3>
+              
+              <ul className="space-y-6 relative z-10">
+                {checklist.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-4">
+                    <div className="mt-1 flex-shrink-0">
+                      <CheckCircle2 className="text-emerald-400" size={20} />
+                    </div>
+                    <p className="text-slate-300 text-base font-medium leading-snug">
+                      {item}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-10 pt-8 border-t border-slate-800">
+                <p className="text-emerald-400 font-bold text-sm mb-2 italic">
+                  "The fastest way to break into Big Tech."
+                </p>
+                <p className="text-slate-500 text-xs uppercase tracking-widest font-bold">
+                  45 Days Intensive Training
+                </p>
               </div>
-            ))}
-            <a
-              href="#register"
-              className="block mt-6 bg-brand-700 text-white py-3.5 rounded-lg text-center font-bold text-base hover:bg-brand-800 transition-colors"
-            >
-              Register Now →
-            </a>
-            <p className="text-center text-xs text-slate-500 mt-2.5">
-              ⏰ Limited seats per batch
-            </p>
+            </div>
           </div>
+
         </div>
       </div>
     </section>

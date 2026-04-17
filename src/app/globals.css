@@ -50,3 +50,67 @@ body {
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+
+
+
+/* globals.css — add these */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.06); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Utility animation classes */
+.anim-fade-up    { opacity: 0; }
+.anim-fade-in    { opacity: 0; }
+.anim-scale-in   { opacity: 0; }
+.anim-slide-left { opacity: 0; }
+
+.anim-fade-up.is-visible    { animation: fadeUp     0.5s ease forwards; }
+.anim-fade-in.is-visible    { animation: fadeIn     0.4s ease forwards; }
+.anim-scale-in.is-visible   { animation: scaleIn    0.45s ease forwards; }
+.anim-slide-left.is-visible { animation: slideInLeft 0.45s ease forwards; }
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.animate-shine {
+  animation: shine 3s linear infinite;
+}
+
